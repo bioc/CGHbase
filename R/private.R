@@ -145,7 +145,7 @@
         centromere[23,] <- c(58598737, 61598737)
         centromere[24,] <- c(11253954, 11653954)
         # centromere[24,] <- c(12208578, 12308578)
-    } else { # GRCh37 / hg19
+    } else if (build == 37 || build == 19) { # GRCh37 / hg19
         centromere[1,] <- c(121535434, 124535434)
         centromere[2,] <- c(92326171, 95326171)
         centromere[3,] <- c(90504854, 93504854)
@@ -170,7 +170,33 @@
         centromere[22,] <- c(13000000, 16000000)
         centromere[23,] <- c(58632012, 61632012)
         centromere[24,] <- c(10104553, 13104553)
+    } else {  # GRCh38 / hg38 / h38
+      centromere[1,] <- c(122026460, 125184587)
+      centromere[2,] <- c(92188146, 94090557)
+      centromere[3,] <- c(90772459, 93655574)
+      centromere[4,] <- c(49708101, 51743951)
+      centromere[5,] <- c(46485901, 50059807)
+      centromere[6,] <- c(58553889, 59829934)
+      centromere[7,] <- c(58169654, 60828234)
+      centromere[8,] <- c(44033745, 45877265)
+      centromere[9,] <- c(43236168, 45518558)
+      centromere[10,] <- c(39686683, 41593521)
+      centromere[11,] <- c(51078349, 54425074)
+      centromere[12,] <- c(34769408, 37185252)
+      centromere[13,] <- c(16000001, 18051248)
+      centromere[14,] <- c(16000001, 18173523)
+      centromere[15,] <- c(17000001, 19725254)
+      centromere[16,] <- c(36311159, 38280682)
+      centromere[17,] <- c(22813680, 26885980)
+      centromere[18,] <- c(15460900, 20861206)
+      centromere[19,] <- c(24498981, 27190874)
+      centromere[20,] <- c(26436233, 30038348)
+      centromere[21,] <- c(10864561, 12915808)
+      centromere[22,] <- c(12954789, 15054318)
+      centromere[23,] <- c(58605580, 62412542)
+      centromere[24,] <- c(10316945, 10544039)
     }
+}
     centromere <- apply(centromere, 1, mean);
     return(centromere);
 }

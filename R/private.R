@@ -196,7 +196,6 @@
       centromere[23,] <- c(58605580, 62412542)
       centromere[24,] <- c(10316945, 10544039)
     }
-}
     centromere <- apply(centromere, 1, mean);
     return(centromere);
 }
